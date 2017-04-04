@@ -107,6 +107,3 @@ class Contact
   # Feel free to add other methods here, if you need them.
 
 end
-
-lauren = Contact.create('Lauren', 'Rosentzveig', 'lauren.rosentzveig@gmail.com', 'winning at life')
-shawn = Contact.create('Shawn', 'Verge', 'shawn.verge@sympatico.ca', 'Every day, becomes more awesome than the next')
