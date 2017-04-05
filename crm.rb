@@ -8,7 +8,6 @@ require 'sinatra'
 # shawn = Contact.create('Shawn', 'Verge', 'shawn.verge@sympatico.ca', 'Every day, becomes more awesome than the next')
 
 get '/' do
-  @crm_app_name = "Lauren's CRM"
   erb :index
 end
 
@@ -22,5 +21,5 @@ end
 
 post '/contacts' do
   Contact.create(params[:first_name], params[:last_name], params[:email], params[:note])
-  redirect to('/contacts')
+  redirect to('/')
 end

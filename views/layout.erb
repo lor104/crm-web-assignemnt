@@ -2,14 +2,15 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="styles.css" type="text/css">
+    <link rel="stylesheet" href="http://localhost:4567/styles.css" type="text/css">
     <title></title>
   </head>
   <body>
     <header>
       <div class="home-title">
-        <h1><%= @crm_app_name %></h1>
+        <h1>Lauren's CRM</h1>
       </div>
+    </header>
       <nav>
 
           <div><a href="/">Home</a></div>
@@ -17,8 +18,9 @@
           <div><a href="/contacts"> View all contacts </a></div>
 
       </nav>
-    </header>
+
     <%= yield %>
-    <footer>&copy; Bitmaker 2016</footer>
+
+    <footer>&copy; Lauren Rosentzveig 2016</footer>
   </body>
 </html>

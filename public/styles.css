@@ -1,5 +1,11 @@
 *, *::before, *::after {
     font-family: helvetica, sans-serif;
+    display: block;
+}
+
+body {
+  width: 100%;
+  margin: 0px;
 }
 
 footer {
@@ -7,6 +13,11 @@ footer {
   color: white;
   font-size: .7em;
   text-align: center;
+  position: absolute;
+  line-height: 40px;
+  width: 100%;
+  height: 40px;
+  bottom: 0;
 }
 
 nav {
@@ -14,7 +25,7 @@ nav {
   list-style: none;
 }
 
-div {
+nav > div {
   display: block;
   width: auto;
   background-color: lightgrey;
@@ -31,5 +42,47 @@ div > a {
   background-color: rgb(74, 74, 74);
   color: white;
   text-align: center;
+  padding: 1px;
+  border-bottom: 2px solid white;
+}
 
+ul {
+
+}
+
+h1.title {
+  text-align: center;
+}
+
+div.contact-list > li > a {
+  display: inline-block;
+  font-weight: normal;
+}
+
+div.contact-list {
+  font-weight: 900;
+  background-color: turquoise;
+  margin-bottom: 7px;
+  width: auto;
+  padding: 15px;
+}
+div.contact-list > li > span {
+
+  display: inline-block;
+  font-size: .8em
+}
+
+div.contact-count > li {
+  background-color: salmon;
+  margin-bottom: 7px;
+  padding: 15px;
+}
+
+div.contact-count span {
+  display: inline-block;
+  border-bottom: 2px solid turquoise;
+}
+
+ul {
+  margin-right: 50px;
 }
