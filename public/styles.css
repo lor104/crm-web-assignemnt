@@ -1,0 +1,35 @@
+*, *::before, *::after {
+    font-family: helvetica, sans-serif;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  font-size: .7em;
+  text-align: center;
+}
+
+nav {
+  text-align: center;
+  list-style: none;
+}
+
+div {
+  display: block;
+  width: auto;
+  background-color: lightgrey;
+  padding: 4px;
+  border-bottom: 2px solid white;
+}
+
+div > a {
+  color: white;
+  text-decoration: none;
+}
+
+.home-title {
+  background-color: rgb(74, 74, 74);
+  color: white;
+  text-align: center;
+
+}
