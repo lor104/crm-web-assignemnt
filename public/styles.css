@@ -54,7 +54,7 @@ h1.title {
   text-align: center;
 }
 
-div.contact-list > li > a {
+div.contact-list a {
   display: inline-block;
   font-weight: normal;
 }
@@ -85,4 +85,10 @@ div.contact-count span {
 
 ul {
   margin-right: 50px;
+}
+
+div a.name-link {
+  font-weight: 900;
+  text-decoration: none;
+  color: black;
 }
