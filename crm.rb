@@ -4,10 +4,10 @@
 require_relative 'contact'
 require 'sinatra'
 
-lauren = Contact.create('Lauren', 'Rosentzveig', 'lauren.rosentzveig@gmail.com', 'winning at life')
-shawn = Contact.create('Shawn', 'Verge', 'shawn.verge@sympatico.ca', 'Every day, becomes more awesome than the next')
-jord = Contact.create('Jordana', 'Rosentzveig', 'jordana.rosentzveig@gmail.com', 'poop head')
-dara = Contact.create('Dara', 'Rosentzveig', 'dara.rosentzveig@gmail.com', 'ugh')
+# lauren = Contact.create('Lauren', 'Rosentzveig', 'lauren.rosentzveig@gmail.com', 'winning at life')
+# shawn = Contact.create('Shawn', 'Verge', 'shawn.verge@sympatico.ca', 'Every day, becomes more awesome than the next')
+# jord = Contact.create('Jordana', 'Rosentzveig', 'jordana.rosentzveig@gmail.com', 'poop head')
+# dara = Contact.create('Dara', 'Rosentzveig', 'dara.rosentzveig@gmail.com', 'ugh')
 
 
 get '/' do
@@ -67,4 +67,8 @@ delete '/contacts/:id' do
   else
     raise Sinatra::NotFound
   end
+end
+
+after do
+  ActiveRecord::Base.connection.close
 end
