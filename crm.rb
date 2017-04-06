@@ -23,8 +23,13 @@ get '/contacts/new' do
 end
 
 post '/contacts' do
-  Contact.create(params[:first_name], params[:last_name], params[:email], params[:note])
-  redirect to('/')
+  Contact.create(
+  first_name: params[:first_name],
+  last_name: params[:last_name],
+  email: params[:email],
+  note: params[:note]
+  )
+  redirect to('/contacts')
 end
 
 get '/contacts/:id' do
@@ -48,10 +53,10 @@ end
 put '/contacts/:id' do
   @contact = Contact.find(params[:id].to_i)
   if @contact
-    @contact.first_name = params[:first_name]
-    @contact.last_name = params[:last_name]
-    @contact.email = params[:email]
-    @contact.note = params[:note]
+    @contact.update_attribute(:first_name, params[:first_name])
+    @contact.update_attribute(:last_name, params[:last_name])
+    @contact.update_attribute(:email, params[:email])
+    @contact.update_attribute(:note, params[:note])
 
     redirect to('/contacts')
   else
